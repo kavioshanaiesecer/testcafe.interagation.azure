@@ -3,7 +3,7 @@ import { Selector } from 'testcafe'
 //Description and Fixture Name to navigate to URL Page
 //Definition of Test Suite
 fixture`Getting Started with TestCafe`
-    .page('https://dgrqaadminportal.azurewebsites.net')
+    .page('websiteURL')
     .before(async t => {
         // Test setup goes here
         // await runDatabaseReset()
@@ -30,7 +30,7 @@ fixture`Getting Started with TestCafe`
     })
 
 // testcase to fill the name in input and click submit
-test('Login to DGR Admin Portal', async t => {
+test('Login to Portal', async t => {
 
     // Set Test Speed
     //await t.setTestSpeed(0.5);
@@ -50,11 +50,11 @@ test('Login to DGR Admin Portal', async t => {
     //await t.takeElementScreenshot(submit_button);
 
     // Enter Username
-    var username = "dgradmin@yopmail.com";
+    var username = "addUserEmail";
     await t.typeText(username_input, username);
 
     // Enter Password
-    var password = "password1";
+    var password = "addPassword";
     await t.typeText(password_input, password);
 
     // Wait Test for Few Seconds
